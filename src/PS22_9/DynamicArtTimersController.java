@@ -35,6 +35,7 @@ public class DynamicArtTimersController{
             circle.setStrokeWidth(random.nextInt(20));
             circle.setStroke(randomColor());
             pane.getChildren().add(circle);
+
             dxC[i] = 1 + random.nextInt(5);
             dyC[i] = 1 + random.nextInt(5);
 //            int temp = i;
@@ -52,6 +53,7 @@ public class DynamicArtTimersController{
             ellipse.setStrokeWidth(random.nextInt(20));
             ellipse.setStroke(randomColor());
             pane.getChildren().add(ellipse);
+
             dxC[i] = 1 + random.nextInt(5);
             dyC[i] = 1 + random.nextInt(5);
             int temp = i;
