@@ -69,6 +69,7 @@ public class AnimatedArtController {
                         sphere.setMaterial(phongMaterial);
 
                         Box cube = new MyBox(randDepth,randHeight, randWidth);
+                        System.out.println(cube.getLayoutY());
                         cube.setTranslateX(randX);
                         cube.setTranslateY(randY);
                         cube.setTranslateZ(randZ);

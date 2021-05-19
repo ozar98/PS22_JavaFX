@@ -36,29 +36,29 @@ public class DynamicArtTimersController{
             circle.setStroke(randomColor());
             pane.getChildren().add(circle);
 
-            dxC[i] = 1 + random.nextInt(5);
-            dyC[i] = 1 + random.nextInt(5);
+//            dxC[i] = 1 + random.nextInt(5);
+//            dyC[i] = 1 + random.nextInt(5);
 //            int temp = i;
 //            Timeline timelineAnimation = new Timeline(
 //                    new KeyFrame(Duration.millis(10), e -> moveCircles(circle, temp))
 //            );
 //            timelineAnimation.setCycleCount(Timeline.INDEFINITE);
 //            timelineAnimation.play();
-            Ellipse ellipse = new Ellipse();
-            ellipse.setCenterX(random.nextInt(500) + 201);
-            ellipse.setCenterY(random.nextInt(300) + 201);
-            ellipse.setRadiusX(random.nextInt(100));
-            ellipse.setRadiusY(random.nextInt(100));
-            ellipse.setFill(randomColor());
-            ellipse.setStrokeWidth(random.nextInt(20));
-            ellipse.setStroke(randomColor());
-            pane.getChildren().add(ellipse);
+//            Ellipse ellipse = new Ellipse();
+//            ellipse.setCenterX(random.nextInt(500) + 201);
+//            ellipse.setCenterY(random.nextInt(300) + 201);
+//            ellipse.setRadiusX(random.nextInt(100));
+//            ellipse.setRadiusY(random.nextInt(100));
+//            ellipse.setFill(randomColor());
+//            ellipse.setStrokeWidth(random.nextInt(20));
+//            ellipse.setStroke(randomColor());
+//            pane.getChildren().add(ellipse);
 
             dxC[i] = 1 + random.nextInt(5);
             dyC[i] = 1 + random.nextInt(5);
             int temp = i;
             Timeline timelineAnimation = new Timeline(
-                    new KeyFrame(Duration.millis(10), e -> moveCircles(circle,ellipse, temp))
+                    new KeyFrame(Duration.millis(10), e -> moveCircles(circle, temp))
             );
             timelineAnimation.setCycleCount(Timeline.INDEFINITE);
             timelineAnimation.play();
@@ -66,19 +66,19 @@ public class DynamicArtTimersController{
 
         }
     }
-    private void moveCircles(Circle e,Ellipse c, int i) {
+    private void moveCircles(Circle c, int i) {
         c.setCenterX(c.getCenterX() + dxC[i]);
         c.setCenterY(c.getCenterY() + dyC[i]);
 
-        e.setCenterX(e.getCenterX()+dxE[i]);
-        e.setCenterY(e.getCenterX()+dyE[i]);
+//        e.setCenterX(e.getCenterX()+dxE[i]);
+//        e.setCenterY(e.getCenterX()+dyE[i]);
 
 
-        if (c.getCenterX() + c.getRadiusX() > pane.getWidth() || c.getCenterX() - c.getRadiusX() < 0) dxC[i] = -dxC[i];
-        if (c.getCenterY() + c.getRadiusY() > pane.getHeight() || c.getCenterY() - c.getRadiusY() < 0) dyC[i] = -dyC[i];
+        if (c.getCenterX() + c.getRadius() > pane.getWidth() || c.getCenterX() - c.getRadius() < 0) dxC[i] = -dxC[i];
+        if (c.getCenterY() + c.getRadius() > pane.getHeight() || c.getCenterY() - c.getRadius() < 0) dyC[i] = -dyC[i];
 
-        if (e.getCenterX() + e.getRadius() > pane.getWidth() || e.getCenterX() - e.getRadius() < 0) dxE[i] = -dxE[i];
-        if (e.getCenterY() + e.getRadius() > pane.getHeight() || e.getCenterY() - e.getRadius() < 0) dyE[i] = -dyE[i];
+//        if (e.getCenterX() + e.getRadiusX() > pane.getWidth() || e.getCenterX() - e.getRadiusX() < 0) dxC[i] = -dxC[i];
+//        if (e.getCenterY() + e.getRadiusY() > pane.getHeight() || e.getCenterY() - e.getRadiusY() < 0) dyC[i] = -dyC[i];
 
     }
 
